@@ -1,0 +1,17 @@
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+    --branco:#FFFFFF;
+    --cinza: #AAA;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.titulo{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
