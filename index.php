@@ -1,18 +1,21 @@
-<?php include 'header.php';?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaAí</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <p class="titulo">Sistema de Nivel de Cadastro</p>
-    <div class="container">
-        <form action="controller/cadastro.php" method="POST">
-            <div class="mb-3">
-                <label class="form-label">Email: </label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="">
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
-                <input name="senha" type="password" class="form-control" id="inputPassword">
-            </div>
-            <input type="submit" class="btn btn-outline-primary" value="Cadastrar"></input>
-        </form>
-    </div>
+    <form action="controller/cadastro.php" method="POST">
+        <label class="">Email: </label>
+        <input name="email" type="email" class="">
+        
+        <label class="">Senha</label>
+        <input name="senha" type="password" class="" >
+
+        <input type="submit" class="" value="Logar"></input>
+    </form>
 </body>
 </html>

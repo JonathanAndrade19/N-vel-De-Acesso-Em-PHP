@@ -5,17 +5,20 @@
         $query = $conn->prepare("SELECT * FROM Tb_contrato WHERE email = ? AND senha = ?");
         $query->execute(array($_POST['email'], $_POST['senha']));
 
-        // echo $query->rowCount();
-
         if($query->rowCount()){
             $usuario = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
-            print_r($usuario);
+            session_start();
+            $_SESSION["usuario"] = array($usuario["nome"], $usuario["adm"]);
+            echo "<script>window.location = '../dashboard.php'</script>";
         }else{
-            echo "Erro";
+            echo "<script>alert('Login ou Senha Incorreta!');</script>";
+            echo "<script>window.location = '../index.php'</script>";
         }
     }else{
-        echo "não tem Autorização";
+        echo "<script>alert('Login ou Senha Incorreta!');</script>";
+        echo "<script>window.location = '../index.php'</script>";
+
     }
 
 ?>
