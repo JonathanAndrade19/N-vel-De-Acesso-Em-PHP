@@ -9,12 +9,9 @@
 </head>
 <body>
     <form action="controller/cadastro.php" method="POST">
-        <label class="">Email: </label>
+        <h3>Entrar na Agenda</h3>
         <input name="email" type="email" class="">
-        
-        <label class="">Senha</label>
         <input name="senha" type="password" class="" >
-
         <input type="submit" class="" value="Logar"></input>
     </form>
 </body>
