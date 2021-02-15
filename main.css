@@ -36,12 +36,12 @@ header .logo{
 
 header nav a{
     text-decoration:none;
-    color: var(--preto);
+    color: var(--lilas);
     margin-right: 20px;
 }
 
 header nav a:hover{
-    color: var(--branco);
+    color: var(--lilasClaro);
 }
 
 @media screen and (max-width:700px){
@@ -61,4 +61,25 @@ header nav a:hover{
     .descricao{
         width: 50%;
     }
+}
+
+/* style page ListUser.php */
+
+.container table{
+    background-color: var(--branco);
+    color: var(--preto);
+    max-width: 700px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.tabela{
+    padding-right: 10px; 
+    font-size: 16px; 
+    text-align: center;
 }

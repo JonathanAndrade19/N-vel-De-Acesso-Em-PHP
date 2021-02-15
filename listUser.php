@@ -17,45 +17,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard - <?php echo $nome; ?></title>
-    <link rel="stylesheet" href="./src/css/main.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h2 class="logo">Logo -> AGENDAAÍ</h2>
+            <nav>
+                <a href="dashboard.php">Inicio</a>
+                <a href="#">Agendar</a>
+                <?php if($adm == 1): ?>
+                    <a href="listUser.php">Lista de Usuarios</a>
+                <?php endif; ?>
+                <a href="controller/logout.php" style="text-decoration:none;">Sair</a>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-        <a href="dashboard.php" style="text-decoration:none;">Voltar</a>
         <?php if($adm == 1):?>
-            <table class="table table-hover">
+            <table>
                 <thead>
                     <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Senha</th>
-                        <th scope="col">Adm</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Senha</th>
+                        <th>Adm</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php  
                         $buscarAdm = $conn->prepare("SELECT * FROM Tb_contrato");
                         $buscarAdm->execute();
-
                         $users = $buscarAdm->fetchAll(PDO::FETCH_ASSOC);
 
                         foreach($users as $user):
                     ?>
                     <tr>
-                        <td><?php echo $user['nome'];?></td>
-                        <td><?php echo $user['email'];?></td>
-                        <td><?php echo $user['senha'];?></td>
-                        <td>
-                            <?php 
-                                if ($user['adm'] == 1){
-                                    echo "Administrador";
-                                }else{
-                                    echo "Funcionario";
-                                }
-                            ?>
+                        <td class="tabela"><?php echo $user['nome'];?></td>
+                        <td class="tabela"><?php echo $user['email'];?></td>
+                        <td class="tabela"><?php echo $user['senha'];?></td>
+                        <td class="tabela">
+                            <?php echo $user['adm'] == 1 ? "Administrador" : "Usuario"; ?>
                         </td>
                     </tr>
                     <?php endforeach;?>

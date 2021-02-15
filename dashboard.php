@@ -25,7 +25,7 @@
         <div class="container">
             <h2 class="logo">Logo -> AGENDAAÍ</h2>
             <nav>
-                <a href="#">Inicio</a>
+                <a href="dashboard.php">Inicio</a>
                 <a href="#">Agendar</a>
                 <?php if($adm == 1): ?>
                     <a href="listUser.php">Lista de Usuarios</a>
