@@ -17,7 +17,7 @@ body{
     background-color: var(--cinza);
     font-family: 'Arial', Times, serif;
     color: var(--branco);
- }
+}
 
 header .container{
     display:flex;

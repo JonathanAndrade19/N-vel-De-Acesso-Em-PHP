@@ -26,12 +26,11 @@
             <h2 class="logo">AGENDAAÍ</h2>
             <nav>
                 <a href="dashboard.php">Inicio</a>
-                <a href="agendar.php">Agendar</a>
+                <a href="post.php">Agendar</a>
                 <?php if($adm == 1): ?>
                     <a href="listUser.php">Lista de Usuarios</a>
                 <?php endif; ?>
                 <a href="controller/logout.php" style="text-decoration:none;">Sair</a>
-                <a><?php echo $nome; ?></a>
             </nav>
         </div>
     </header>
