@@ -34,6 +34,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             border-radius: 10px;
+            box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
         }
 
         form input[type=text],
@@ -58,12 +59,11 @@
         form input[type=submit]:hover{
             background-color: var(--lilasClaro);
         }
-
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container" style="box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);">
             <h2 class="logo">AGENDAAÍ</h2>
             <nav>
                 <a href="dashboard.php">Inicio</a>
@@ -77,13 +77,12 @@
     </header>
 
     <div class="post">
-        <form action="controller/cadastro.php" method="POST">
+        <form action="controller/postagem.php" method="POST">
             <h3>Novo Postagem</h3>
             <input name="titulo" type="text">
             <input name="data" type="date" >
             <input name="postagem" type="text">
             <input name="visitas" type="text">
-            <input name="titulo" type="text">
             <input name="id_postador" type="text">
             <input type="submit" value="Novo Post"></input>
         </form>

@@ -21,7 +21,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container" style="box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);">
             <h2 class="logo">AGENDAAÍ</h2>
             <nav>
                 <a href="dashboard.php">Inicio</a>
@@ -35,7 +35,7 @@
     </header>
     <div class="container">
         <?php if($adm == 1):?>
-            <table>
+            <table style="box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);">
                 <thead>
                     <tr>
                         <th>Nome</th>
